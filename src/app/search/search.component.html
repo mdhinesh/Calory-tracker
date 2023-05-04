@@ -1,0 +1,9 @@
+<!-- <ci-search></ci-search> -->
+
+<input type="text"
+#searchInput nbInput
+(keyup)="searchProduct($event)" (blur)="hideSearch()" id="searchBox" [(ngModel)]="querymodel" placeholder="Search here" />
+<button nbButton status="warning" (click)="submitSearch(searchInput.value)" >Search</button>
+<div class="results">
+
+</div>

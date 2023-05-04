@@ -1,0 +1,73 @@
+<div class="header_container">
+
+    <div class="hamburger_app_name">
+<!-- Hamburger_icon -->
+    <button nbButton status="basic" size="tiny" (click)="toggle()">
+        <img class="toggle_menu" src="../assets/Hamburger_icon.svg.png" alt="">
+    </button>
+
+<!-- App_name -->
+    <span class="app_name">
+        Calory tracker
+    </span>
+    <span class="spacer"></span>
+    </div>
+
+    <div class="dropdown_signin_profile">
+<!-- Dropdown_menu -->
+    <div class="dropdown" (mouseenter)="showMenu = true" (mouseleave)="showMenu = false">
+        Track your calories
+        <span><img src="../assets/dropdownsymbol.png" alt=""></span>
+
+<!-- Dropdown content Only visible on hover -->
+        <div *ngIf="showMenu" class="menu">
+            <nb-card accent="info">
+            <nb-card-body>
+                <nb-list>
+                    <nb-list-item>
+                        <a routerLink="/addfood" >
+                            Add Food
+                        </a>
+                    </nb-list-item>
+                    <nb-list-item>
+                        <a routerLink="/foodlist" >
+                            Food List
+                        </a>
+                    </nb-list-item>
+                  </nb-list>  
+                            <!-- <nb-list>
+                <nb-list-item><a routerLink="addfood">Add Food</a></nb-list-item>
+                <nb-list-item><a routerLink="foodlist">Food List</a></nb-list-item>
+                </nb-list> -->
+            </nb-card-body>
+            </nb-card>
+        </div>    
+
+    </div> 
+
+<!-- Google_signin if not loggedin-->
+    <mat-card *ngIf="!loggedIn">
+        <google-signin-butt [selectable]="showGoogleLogin"></google-signin-butt>
+    </mat-card>  
+
+<!-- Profile_pic if loggedin-->
+    <button *ngIf="loggedIn" [matMenuTriggerFor]="beforeMenu">
+        <img class="profile_img" width="50" variant="contained" shape="circle" [src]="user.photoUrl" [alt]="user.name" referrerpolicy="no-referrer">
+    </button>
+
+<!-- Displays profile info on clicking profile pic -->
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+        <mat-list class="profile-display">
+        <mat-list-item>
+            <span matListItemTitle>{{ user.name }}</span>
+            <span matListItemLine>{{ user.email }}</span>
+        </mat-list-item>
+        
+        <mat-list-item>
+            <button mat-raised-button color="primary" (click)="logout()">Logout</button>
+        </mat-list-item>
+        </mat-list>
+    </mat-menu>
+    </div>
+
+</div>

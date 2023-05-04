@@ -1,0 +1,21 @@
+<div class="food_list_container">
+    <nb-card status="success">
+        <nb-card-header class="food_list_card_header">
+            <span class="food_list_card_header_text">
+                Food List 
+            </span>
+            <span class="spacer"></span>
+        </nb-card-header>
+        <nb-card-body>
+            <nb-accordion *ngFor="let item of foodData">
+                <!-- *ngFor="let item of filteredList | SearchFilter: query" -->
+                <nb-accordion-item>
+                 <nb-accordion-item-header>{{ item.name }}</nb-accordion-item-header>
+                 <nb-accordion-item-body>
+                    Calory count: {{ item.calories }}
+                 </nb-accordion-item-body>
+                </nb-accordion-item>
+            </nb-accordion>
+        </nb-card-body>
+    </nb-card>
+</div>

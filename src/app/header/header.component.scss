@@ -1,0 +1,134 @@
+.spacer {
+    flex: 1 1 auto !important;
+}
+
+.header_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // padding: 0 20px;
+    width: 95vw;
+    overflow: hidden;
+    height: 250px;
+}
+
+.hamburger_app_name{
+    display: flex;
+    align-items: center;
+}
+
+.dropdown_signin_profile{
+    display: flex;
+    align-items: center;
+}
+
+.Profile-header{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.profile-display{
+    width: max-content;
+}
+
+.toggle_menu{
+    height: 30px;
+    width: 30px;
+}
+
+.app_name{
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.header{
+    background-color: #fafafa;
+}
+
+.sidebar{
+    background-color: #fafafa;
+}
+
+.profile_img{
+    border-radius: 50%;
+}
+
+.add_newFood_button{
+    width: 50px !important;
+}
+
+.dropdown{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+    margin-left: auto;
+}
+
+.dropdown img{
+    margin-left: 6px;
+    width: 10px;
+    height: 10px;
+}
+  
+.dropdown .menu {
+    position: absolute;
+    top: 100%;
+    left: -15;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    z-index: 1 !important;
+}
+
+.dropdown .menu nb-card {
+    margin: 0;
+    box-shadow: none;
+}
+
+.dropdown .menu nb-list-item {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.dropdown .menu nb-list-item:hover {
+    background-color: #f5f5f5;  
+}
+
+.menu{
+    width: 200px;
+    z-index: 1 !important;
+}
+
+.menu_icon{
+    width: 20px;
+    height: 20px;
+}
+
+.menu_items{
+    cursor: pointer;
+}
+
+.menu a:hover{
+    color: #0000EE;
+}
+
+.hamburger_app_name button{
+    margin-left: 10px;
+}
+
+// Write a media query for mobile devices
+@media screen and (max-width: 600px) {
+    .dropdown{
+        display: none;
+    }
+
+    .profile_img{
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+}

@@ -1,0 +1,19 @@
+<div class="addfood_container">
+    <nb-card status="success">
+        <nb-card-header>Add Food Items</nb-card-header>
+        <nb-card-body>
+          <div class="add_food_card_body">
+            <label class="add_food_card_body_label" for="Name">Name:</label>
+            <input nbInput type="text" id="name" placeholder="Item name" [(ngModel)]="name" >
+            <br>
+            <label class="add_food_card_body_label" for="Calories">Calories</label>
+            <input nbInput type="text" id="calories" placeholder="Item calory" [(ngModel)]="calories" > 
+            <br>
+            <label class="add_food_card_body_label" for="Image">Image URL</label>
+            <input nbInput type="text" id="image" placeholder="Image URL" [(ngModel)]="image" >
+            <br>
+          </div>
+          <button nbButton status="basic" id="add_newFood_button" type="submit" (click)="addList()" >Add New Food</button>
+        </nb-card-body>
+    </nb-card>    
+</div>
