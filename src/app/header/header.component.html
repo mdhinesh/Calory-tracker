@@ -3,13 +3,16 @@
     <div class="hamburger_app_name">
 <!-- Hamburger_icon -->
     <button nbButton status="basic" size="tiny" (click)="toggle()">
-        <img class="toggle_menu" src="../assets/Hamburger_icon.svg.png" alt="">
+        <img class="toggle_menu" nbInput src="../assets/Hamburger_icon.svg.png" alt="">
     </button>
 
 <!-- App_name -->
     <span class="app_name">
         Calory tracker
     </span>
+    <!-- <input type="text" placeholder="Enter your search" class="searchBox"> -->
+    <div class="searchBox"></div>
+    <!-- <ci-search></ci-search> -->
     <span class="spacer"></span>
     </div>
 
@@ -32,6 +35,11 @@
                     <nb-list-item>
                         <a routerLink="/foodlist" >
                             Food List
+                        </a>
+                    </nb-list-item>
+                    <nb-list-item>
+                        <a routerLink="/search" >
+                            Search
                         </a>
                     </nb-list-item>
                   </nb-list>  

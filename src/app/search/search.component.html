@@ -1,9 +1,27 @@
 <!-- <ci-search></ci-search> -->
 
-<input type="text"
-#searchInput nbInput
-(keyup)="searchProduct($event)" (blur)="hideSearch()" id="searchBox" [(ngModel)]="querymodel" placeholder="Search here" />
-<button nbButton status="warning" (click)="submitSearch(searchInput.value)" >Search</button>
-<div class="results">
-
-</div>
+<nb-card status="success">
+    <nb-card-header>
+        <span>
+            Search Results
+        </span>
+        <span class="spacer"></span>
+        <input type="text" #searchInput nbInput id="search" placeholder="Search here" />
+        <button nbButton status="warning" (click)="submitSearch(searchInput.value)">Search</button>            
+    </nb-card-header>
+    <nb-card-body>
+        <div *ngIf="searchResult && searchResult.length > 0; else noResults">
+            <nb-accordion *ngFor="let item of searchResult">
+                <nb-accordion-item>
+                    <nb-accordion-item-header>{{ item.name }}</nb-accordion-item-header>
+                    <nb-accordion-item-body>
+                    Calory count: {{ item.calories }}
+                    </nb-accordion-item-body>
+                </nb-accordion-item>
+            </nb-accordion>
+        </div>
+        <ng-template #noResults>
+            <div class="no-results">{{searchResults}}</div>
+        </ng-template>
+    </nb-card-body>
+</nb-card>

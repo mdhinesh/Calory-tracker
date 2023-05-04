@@ -33,6 +33,7 @@ import { FoodListComponent } from './food-list/food-list.component';
 import { SearchComponent } from './search/search.component';
 
 import { ProductService } from './services/list.service';
+import { SearchResultComponent } from './search-result/search-result.component';
 
 
 @NgModule({
@@ -71,6 +72,7 @@ import { ProductService } from './services/list.service';
     AddFoodComponent,
     FoodListComponent,
     SearchComponent,
+    SearchResultComponent,
   ],
   providers: [
     {
