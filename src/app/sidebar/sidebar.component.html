@@ -1,17 +1,17 @@
 <div class="sidebar_container">
     <nb-list>
         <nb-list-item class="menu_items">
-            <a routerLink="/addfood" >
+            <a routerLink="/addfood" (click)="hideSidebar()">
                 Add Food
             </a>
         </nb-list-item>
         <nb-list-item class="menu_items">
-            <a routerLink="/foodlist" >
+            <a routerLink="/foodlist" (click)="hideSidebar()" >
                 Food List
             </a>
         </nb-list-item>
         <nb-list-item class="menu_items">
-            <a routerLink="/search" >
+            <a routerLink="/search" (click)="hideSidebar()" >
                 Search
             </a>
         </nb-list-item>

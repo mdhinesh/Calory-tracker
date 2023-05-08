@@ -1,20 +1,25 @@
 <div class="header_container">
 
     <div class="hamburger_app_name">
+        <div class="hamburger_app_name_container">
 <!-- Hamburger_icon -->
-    <button nbButton status="basic" size="tiny" (click)="toggle()">
-        <img class="toggle_menu" nbInput src="../assets/Hamburger_icon.svg.png" alt="">
-    </button>
+        <button nbButton status="basic" size="tiny" (click)="toggle()">
+            <img class="toggle_menu" nbInput src="../assets/Hamburger_icon.svg.png" alt="">
+        </button>
 
 <!-- App_name -->
-    <span class="app_name">
-        Calory tracker
-    </span>
+        <span class="app_name">
+            Caltrack
+        </span>
+        </div>
     <!-- <input type="text" placeholder="Enter your search" class="searchBox"> -->
-    <div class="searchBox"></div>
-    <!-- <ci-search></ci-search> -->
-    <span class="spacer"></span>
+    <!-- <div class="searchBox"></div> -->
+    <div>
+        <app-expertrec-search></app-expertrec-search>
     </div>
+    <!-- <ci-search></ci-search> -->
+    </div>
+    <span class="spacer"></span>
 
     <div class="dropdown_signin_profile">
 <!-- Dropdown_menu -->
@@ -28,21 +33,22 @@
             <nb-card-body>
                 <nb-list>
                     <nb-list-item>
-                        <a routerLink="/addfood" >
+                        <a routerLink="/addfood" (click)="hideDropdown()" >
                             Add Food
                         </a>
                     </nb-list-item>
                     <nb-list-item>
-                        <a routerLink="/foodlist" >
+                        <a routerLink="/foodlist" (click)="hideDropdown()" >
                             Food List
                         </a>
                     </nb-list-item>
                     <nb-list-item>
-                        <a routerLink="/search" >
+                        <a routerLink="/search" (click)="hideDropdown()" >
                             Search
                         </a>
                     </nb-list-item>
-                  </nb-list>  
+                </nb-list>  
+                  
                             <!-- <nb-list>
                 <nb-list-item><a routerLink="addfood">Add Food</a></nb-list-item>
                 <nb-list-item><a routerLink="foodlist">Food List</a></nb-list-item>

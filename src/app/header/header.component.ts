@@ -49,4 +49,8 @@ export class HeaderComponent {
     this.currentUser = new SocialUser;
   }
 
+  hideDropdown(){
+    this.showMenu = false;
+  }
+
 }

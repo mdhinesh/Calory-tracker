@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -34,6 +34,7 @@ import { SearchComponent } from './search/search.component';
 
 import { ProductService } from './services/list.service';
 import { SearchResultComponent } from './search-result/search-result.component';
+import { ExpertrecSearchComponent } from './expertrec-search/expertrec-search.component';
 
 
 @NgModule({
@@ -73,6 +74,7 @@ import { SearchResultComponent } from './search-result/search-result.component';
     FoodListComponent,
     SearchComponent,
     SearchResultComponent,
+    ExpertrecSearchComponent,
   ],
   providers: [
     {
@@ -96,6 +98,7 @@ import { SearchResultComponent } from './search-result/search-result.component';
     ProductService
   ],
   bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { 
   constructor(private iconLibraries: NbIconLibraries) {

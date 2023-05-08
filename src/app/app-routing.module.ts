@@ -7,6 +7,17 @@ import { SearchResultComponent } from './search-result/search-result.component';
 
 const routes: Routes = [
   {
+    path: '',
+    // redirectTo: '/search',
+    component: AddFoodComponent,
+    children: [
+      {
+        path: '',
+        component: FoodListComponent
+      } 
+    ]
+  },
+  {
     path: 'addfood',
     component: AddFoodComponent
   },

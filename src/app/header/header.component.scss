@@ -15,11 +15,20 @@
 .hamburger_app_name{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    min-width: 60%;
+}
+
+.hamburger_app_name_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
 }
 
 .dropdown_signin_profile{
     display: flex;
     align-items: center;
+    max-width: 30%;
 }
 
 .Profile-header{
@@ -126,9 +135,30 @@
     }
 
     .profile_img{
-        width: 40px;
-        height: 40px;
-        margin-right: 10px;
+        width: 35px;
+        height: 35px;
+        margin-right: 4px;
+    }
+
+    .hamburger_app_name{
+        width: 90%;
+    }
+
+    .hamburger_app_name button{
+        height: 30px;
+        width: 30px;
+        padding: 0px;
+        border: none;
+        outline: none;
+        position: fixed;
+        left: -2px;
+        top: 22px;
+    }
+
+    .app_name{
+        font-size: 22px;
+        font-weight: 500;
+        margin-left: 16px;
     }
 
 }
